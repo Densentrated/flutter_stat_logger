@@ -5,7 +5,8 @@ import 'package:flat_list/flat_list.dart';
 void main() {
   // stopping rendering in the status bar
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Color.fromARGB(255, 0, 0, 0), // Set status bar color to transparent
+    statusBarColor:
+        Color.fromARGB(255, 0, 0, 0), // Set status bar color to transparent
     statusBarIconBrightness: Brightness.light, // Set status bar icons to dark
   ));
 
@@ -23,16 +24,18 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.deepPurple[200],
         body: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              Container( // space for the mood flatlist
+              Container(
+                // space for the mood flatlist
                 height: MediaQuery.of(context).size.height * .60,
                 decoration: const BoxDecoration(
                   color: Colors.red,
                 ),
               ),
-              Container( // linear separator
+              Container(
+                // linear separator
                 height: MediaQuery.of(context).size.height * .02,
                 decoration: const BoxDecoration(
                   color: Colors.green,
@@ -50,8 +53,7 @@ class MyApp extends StatelessWidget {
                   color: Colors.yellow,
                 ),
               ),
-            ]
-        ),
+            ]),
       ),
     );
   }
@@ -80,8 +82,9 @@ class MoodData {
   bool hungry;
   bool watch;
   bool trouble;
-  
-  MoodData(this.currentEmotinalState, this.feelings, this.energy, this.sleep, this.test, this.caffinated, this.hungry, this.watch, this.trouble);
+
+  MoodData(this.currentEmotinalState, this.feelings, this.energy, this.sleep,
+      this.test, this.caffinated, this.hungry, this.watch, this.trouble);
 }
 
-enum EmotionalState {contentness, joy, saddness, anger, fear}
+enum EmotionalState { contentness, joy, saddness, anger, fear }
